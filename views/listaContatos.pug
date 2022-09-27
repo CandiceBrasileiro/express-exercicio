@@ -1,0 +1,25 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Página Principal 
+  body 
+    h1 Listar Contatos
+    h2
+      table(style='width:50%', border='1')
+        thead
+          tr 
+              th(scope='col') Id 
+              th(scope='col') Nome 
+              th(scope='col') Telefone 
+              th(scope='col') E-mail  
+        tbody 
+          each contato in contatos
+              tr
+                  td= contato.id
+                  td= contato.nome
+                  td= contato.telefone
+                  td= contato.email 
+    
